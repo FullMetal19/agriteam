@@ -1,18 +1,17 @@
 import { Navigate, Outlet } from "react-router-dom";
+import { useAuth } from "../hooks/useAuth";
 
-const isTokenValid = () => {
-  const token = localStorage.getItem("token");
-  if (!token) return false;
+export default function ProtectedRoute() 
+{
+  const { user, loading } = useAuth();
 
-  try {
-    const payload = JSON.parse(atob(token.split(".")[1])); 
-    const exp = payload.exp * 1000; 
-    return Date.now() < exp;
-  } catch (err) {
-    return false;
-  }
-};
+  if (loading) {
+     return (
+      <div className="d-flex align-items-center justify-content-center vh-100"> 
+        <div className="spinner-border text-success fs-1" role="status" aria-label="Chargement"></div> 
+      </div>
+     )
+  }; 
 
-export default function ProtectedRoute() {
-  return isTokenValid() ? <Outlet /> : <Navigate to="/404" replace />;
+  return user ? <Outlet /> : <Navigate to="/404" replace />;
 }
