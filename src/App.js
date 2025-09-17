@@ -26,7 +26,7 @@ function App() {
      <BrowserRouter>
       <Routes>
         {/* Toutes les routes protégées */}
-        {/* <Route element={<ProtectedRoute />}>
+        <Route element={<ProtectedRoute />}>
           <Route path="/" element={<News />} />
           <Route path="/marche-virtuel" element={<MarketPlace />} />
           <Route path="/product/:id" element={<OneProduct />} />
@@ -40,21 +40,7 @@ function App() {
           <Route path="/commande-externe" element={<ExternalOrder />} />
           <Route path="/historique-retraits" element={<WithdrawHistoric />} />
           <Route path="/historique-session" element={<DiscussionHistoric />} />
-        </Route> */}
-
-          <Route path="/" element={<News />} />
-          <Route path="/marche-virtuel" element={<MarketPlace />} />
-          <Route path="/product/:id" element={<OneProduct />} />
-          <Route path="/discussion" element={<Discussions />} />
-          <Route path="/mon-compte" element={<Account />} />
-          <Route path="/panel-nouvelle" element={<Unews />} />
-          <Route path="/panel-produit" element={<Uproduct />} />
-          <Route path="/panel-session" element={<Udiscussion />} />
-          <Route path="/chat-session/:sessionId" element={<ChatSession />} />
-          <Route path="/commande" element={<MyOrder />} />
-          <Route path="/commande-externe" element={<ExternalOrder />} />
-          <Route path="/historique-retraits" element={<WithdrawHistoric />} />
-          <Route path="/historique-session" element={<DiscussionHistoric />} />
+        </Route>
 
         {/* Page 404 accessible même sans token */}
         <Route path="/404" element={<Error />} />
