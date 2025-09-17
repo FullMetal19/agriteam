@@ -76,7 +76,7 @@ export default function Header({ page=1 })
                   <li><a className="dropdown-item bg-light border-top py-2 small text-muted" href="/mon-compte"> Mon compte </a></li>
                   <li><a className="dropdown-item bg-light border-top py-2 small text-muted" href="/commande"> Mes commandes </a></li>
                   <li><button className="dropdown-item bg-light border-top py-2 small text-muted" onClick={ signout }>
-                    Déconnexion <i className="bi bi-arrow-left ms-2"></i> 
+                    Agrospace <i className="bi bi-arrow-left ms-2"></i> 
                   </button></li>
                 </ul>
               </li>
