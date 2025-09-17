@@ -28,7 +28,7 @@ export function ImageContainer ({ images })
 
           onClick={() => handleShow(item.image)}
         >
-          <img src={`${process.env.REACT_APP_PATH}/${item.image}`} alt={`post-img-${index}`} className="w-100 h-100 object-fit-cover" />
+          <img src={`${item.image}`} alt={`post-img-${index}`} className="w-100 h-100 object-fit-cover" />
         </div>
       ))}
 
