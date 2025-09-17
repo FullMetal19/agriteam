@@ -37,7 +37,7 @@ export function ImageContainer ({ images })
         <Modal.Body className="p-0">
           {currentImage && (
             <img
-              src={`${process.env.REACT_APP_PATH}/${currentImage}`}
+              src={`${currentImage}`}
               alt="large"
               className="w-100 h-auto"
               style={{ maxHeight: "90vh", objectFit: "contain" }}
