@@ -10,7 +10,7 @@ export function UserApi(contentType = "application/json")
 
         // insert : (data) => http.post("/api/message", data),
 
-        findOne: () => https.get(`/api/user`, { withCredentials: true }),
+        findOne: () => https.get(`/api/user`),
 
         updateOne: (data) => https.put(`/api/user`, data)
 

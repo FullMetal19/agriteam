@@ -5,7 +5,6 @@ import { Error } from "./views/Error";
 import MarketPlace from "./views/MarketPlace";
 import Discussions from "./views/Discussion";
 import News from "./views/News";
-import Template from "./components/Template";
 import Unews from "./views/my-account/Unews";
 import Uproduct from "./views/my-account/Uproducts";
 import Udiscussion from "./views/my-account/Usession";
