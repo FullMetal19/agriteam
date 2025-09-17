@@ -12,8 +12,9 @@ export function UserApi(contentType = "application/json")
 
         findOne: () => https.get(`/api/user`),
 
-        updateOne: (data) => https.put(`/api/user`, data)
+        updateOne: (data) => https.put(`/api/user`, data),
 
+        logout : () => https.post("/api/user/logging-out"), 
 
       };
 }

@@ -8,9 +8,18 @@ import { useQuery } from "@tanstack/react-query";
 
 export default function Header({ page=1 }) 
 {
-  const signout = ()=> {
-      localStorage.clear();
-      window.open(process.env.REACT_APP_AGROSPACE_URL, "_self", "noopener", "noreferrer");
+  const users = UserApi();
+
+  const signout = async ()=> {
+    try {
+      const { data } = await users.logout();
+      if ( data.success ) {
+        localStorage.clear();
+        window.open(process.env.REACT_APP_AGROSPACE_URL, "_self", "noopener,noreferrer");
+      }
+    } catch (error) {
+      console.log('erreur de deconnexion'); 
+    }
   }
 
 
