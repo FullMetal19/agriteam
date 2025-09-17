@@ -319,7 +319,7 @@ export function UproductUpdateModal({ close, data, refetch })
 
                   <div className="mb-3">
                     <label className="text-secondary small mb-2 ms-3">Description du produit </label>
-                    <textarea className="border p-3 rounded-2 w-100 text-muted" rows="5" name="desc" value={ inputs?.desc }  onChange={ handleInputs } required placeholder="Écrivez quelque chose..."> </textarea>
+                    <textarea className="border p-3 rounded-2 w-100 text-muted" rows="5" name="desc" value={ inputs?.description }  onChange={ handleInputs } required placeholder="Écrivez quelque chose..."> </textarea>
                   </div>
 
                 </div> 

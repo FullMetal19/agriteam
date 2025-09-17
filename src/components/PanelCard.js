@@ -84,7 +84,7 @@ export function UproductCard({ update, remove, data, likerListHandler, refetch }
       </div>
       {/* ***************** Text **************** */}
       <div className="px-3 text-muted">
-        <TextExpandable text={ data?.desc } wordLimit={20} />
+        <TextExpandable text={ data?.description } wordLimit={20} />
       </div>
       <div className="row"> 
         <div className="col-sm-4"> 
@@ -108,7 +108,7 @@ export function UproductCard({ update, remove, data, likerListHandler, refetch }
       <div className="card-footer bg-white d-flex justify-content-between border-0 pt-4">
         <div className="d-flex align-items-center">
           <i className="bi bi-heart-fill text-success me-2 cursor" onClick={ ()=> likerListHandler(data) } ></i>
-          <small className="text-secondary"> { data?.like } </small>
+          <small className="text-secondary"> { data?.likes } </small>
         </div>
         <div>
           <button className="btn btn-sm  border text-muted me-2"  onClick={ likeHandle }>
