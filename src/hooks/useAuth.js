@@ -14,10 +14,10 @@ export const useAuth = () => {
     const checkAuth = async () => {
       try {
         const { data } = await users.findOne();
-        localStorage.setItem('uid', data?.id)
-        setUser(data.data); // l'utilisateur est connecté
+        localStorage.setItem('uid', data?.data?.id)
+        setUser(data.data); 
       } catch (err) {
-        setUser(null);      // non connecté
+        setUser(null);    
       } finally {
         setLoading(false);
       }

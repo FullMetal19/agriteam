@@ -144,7 +144,7 @@ function Checker ({ sessionId, replyData, parentMessage, closeReplyBox, refetch 
     const fetchData = async () => {
       try {
         const res = await session.findOne(sessionId);
-        console.log(res.data);
+        // console.log(res.data);
         return res.data.data || [];
       } catch (err) {
         console.log("Erreur lors de la récupération des produits : " + err.message);
