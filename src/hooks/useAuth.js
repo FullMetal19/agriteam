@@ -14,7 +14,7 @@ export const useAuth = () => {
     const checkAuth = async () => {
       try {
         const { data } = await users.findOne();
-        console.log(data);
+        localStorage.setItem('uid', data?.id)
         setUser(data.data); // l'utilisateur est connecté
       } catch (err) {
         setUser(null);      // non connecté

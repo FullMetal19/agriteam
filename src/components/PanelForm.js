@@ -182,7 +182,6 @@ export function UproductForm({ close, refetch })
     const product = ProductApi("multipart/form-data");
     setStatus(0);
     setIsLoading(true);
-    console.log(inputs);
     
     try {
       const formData = new FormData();
