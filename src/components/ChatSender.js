@@ -71,7 +71,7 @@ export default function ChatSender({
     try {
       const formData = new FormData();
 
-      if (parentMessage?.userId) {
+      if (replyData && parentMessage?.userId) {
         formData.append("parentId", parentMessage.id);
       }
 

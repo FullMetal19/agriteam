@@ -7,7 +7,11 @@ import { SessionApi } from "../api-services/session.api";
 export function UnewsUpdateModal({ close, data, refetch })
 {
   
-  const [inputs, setInputs] = useState(data);
+  const [inputs, setInputs] = useState(
+    {
+      desc : data?.description
+    }
+  );
   const [status, setStatus] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -198,7 +202,15 @@ export function UnewsDeleteModal({ close, data, refetch })
 export function UproductUpdateModal({ close, data, refetch })
 {
 
-  const [inputs, setInputs] = useState(data);
+  const [inputs, setInputs] = useState({
+    name : data?.name,
+    category : data?.category,
+    category : data?.category,
+    unitPrice : data?.unitPrice,
+    stock : data?.stock,
+    desc : data?.description
+
+  });
   const [status, setStatus] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
 
@@ -319,7 +331,7 @@ export function UproductUpdateModal({ close, data, refetch })
 
                   <div className="mb-3">
                     <label className="text-secondary small mb-2 ms-3">Description du produit </label>
-                    <textarea className="border p-3 rounded-2 w-100 text-muted" rows="5" name="desc" value={ inputs?.description }  onChange={ handleInputs } required placeholder="Écrivez quelque chose..."> </textarea>
+                    <textarea className="border p-3 rounded-2 w-100 text-muted" rows="5" name="desc" value={ inputs?.desc }  onChange={ handleInputs } required placeholder="Écrivez quelque chose..."> </textarea>
                   </div>
 
                 </div> 
@@ -457,7 +469,11 @@ export function UproductDeleteModal({ close, data, refetch })
 export function UsessionUpdateModal({ close, data, refetch })
 {
    
-  const [inputs, setInputs] = useState(data);
+  const [inputs, setInputs] = useState(
+    {
+      desc : data?.description
+    }
+  );
   const [status, setStatus] = useState(0);
   const [isLoading, setIsLoading] = useState(false);
 

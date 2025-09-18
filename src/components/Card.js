@@ -219,7 +219,7 @@ function Profile({data})
         </div>
         <div>
             <div className="fw-bold text-secondary small"> { data?.fname + ' ' + data?.lname } </div>
-            <div className="text-secondary small"> { data?.role ? data?.role : "profession de l'utilisateur" } </div>
+            <div className="text-secondary small"> { data?.occupation } </div>
         </div>    
         <span className="d-flex align-items-center justify-content-center ms-auto border bg-green-light rounded-circle" style={{ width:30, height:30}}>
           <i className="bi bi-cart text-success small"></i>
