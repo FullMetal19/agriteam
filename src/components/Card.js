@@ -28,7 +28,7 @@ export function NewsCard({ likerListHandler, data, refetch })
       <Profile data={ data.owner } />
       {/* ***************** Text **************** */}
       <div className="px-3 text-muted">
-        <TextExpandable text={ data?.desc } wordLimit={20} />
+        <TextExpandable text={ data?.description } wordLimit={20} />
       </div>
       {/* ***************** Image ****************** */}
       <ImageContainer images={data.images} />
@@ -36,7 +36,7 @@ export function NewsCard({ likerListHandler, data, refetch })
       <div className="card-footer bg-white d-flex justify-content-between border-0 pt-4">
         <div className="d-flex align-items-center">
           <i className="bi bi-heart-fill text-success me-2 cursor" onClick={ ()=> likerListHandler(data) } ></i>
-          <small className="text-secondary"> { data?.like } </small>
+          <small className="text-secondary"> { data?.likes } </small>
         </div>
         <div>
           <button className="btn btn-sm  border text-muted me-2" onClick={ likeHandle }>
@@ -140,14 +140,14 @@ export function DiscussionCard({ likerListHandler, data, refetch })
           }
         </div>
         
-        <TextExpandable text={ data?.desc } wordLimit={20} />
+        <TextExpandable text={ data?.description } wordLimit={20} />
       </div>
 
       {/* ***************** Actions *****************************/}
       <div className="card-footer bg-white d-flex justify-content-between border-0 pt-4">
         <div className="d-flex align-items-center">
           <i className="bi bi-heart-fill text-success me-2 cursor" onClick={ ()=> likerListHandler(data) } ></i>
-          <small className="text-secondary">{ data?.like }</small>
+          <small className="text-secondary">{ data?.likes }</small>
         </div>
         <div>
           <button className="btn btn-sm border text-muted me-2" onClick={ likeHandle }>
@@ -307,7 +307,7 @@ export function ExternOrderCard({data})
       <div className="d-flex flex-column px-3 py-2 text-muted bg-light border-top border-bottom rounded-2">
         <span className="text-muted mb-1"> <i className="bi bi-plus-circle me-2"></i> Source du post </span>
         <span className="text-secondary">
-          <TextReducer text={ data?.product.desc } maxsize={85} />
+          <TextReducer text={ data?.product.description } maxsize={85} />
           <a href={'/product/'+data?.product.id } className="btn btn-sm text-muted mx-2" title="Voir plus">
             <i className="bi bi-arrow-right"></i> 
           </a>

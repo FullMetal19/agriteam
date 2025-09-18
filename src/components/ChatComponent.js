@@ -104,7 +104,7 @@ export function MessageBox({ design, data, setReply, remove })
             )
           }
           {
-            data?.image && ( <img src={`${process.env.REACT_APP_PATH}/${data?.image}`} className="img-fluid border mb-3 rounded-3" alt="my-image" /> )
+            data?.image && ( <img src={`${data?.image}`} className="img-fluid border mb-3 rounded-3" alt="my-image" /> )
           }
           <p className="text-secondary"> { data?.message } </p>
           <small className="text-secondary fs-xs"> { data?.createdAt } </small>

@@ -35,7 +35,7 @@ export function UnewsCard({ update, remove, data, likerListHandler, refetch })
 
       {/* ***************** Text **************** */}
       <div className="px-3 text-muted">
-        <TextExpandable text={ data?.desc } wordLimit={20} />
+        <TextExpandable text={ data?.description } wordLimit={20} />
       </div>
       {/* ***************** Image ****************** */}
        <ImageContainer images={data.images} />
@@ -44,7 +44,7 @@ export function UnewsCard({ update, remove, data, likerListHandler, refetch })
       <div className="card-footer bg-white d-flex justify-content-between border-0 p-3">
         <div className="d-flex align-items-center">
           <i className="bi bi-heart-fill text-success me-2 cursor" onClick={ ()=> likerListHandler(data) }></i>
-          <small className="text-secondary">{ data?.like }</small>
+          <small className="text-secondary">{ data?.likes }</small>
         </div>
         <div>
           <button className="btn btn-sm  border text-muted me-2" onClick={ likeHandle } >
@@ -160,13 +160,13 @@ export function UdiscussionCard({ update, remove, data, likerListHandler, refetc
             )
           }
         </div>
-        <TextExpandable text={ data?.desc } wordLimit={20} />
+        <TextExpandable text={ data?.description } wordLimit={20} />
       </div>
       {/* ***************** Actions *****************************/}
       <div className="card-footer bg-white d-flex justify-content-between border-0 p-4">
         <div className="d-flex align-items-center">
           <i className="bi bi-heart-fill text-success me-2 cursor" onClick={ ()=> likerListHandler(data) }></i>
-          <small className="text-secondary">{ data?.like }</small>
+          <small className="text-secondary">{ data?.likes }</small>
         </div>
         <div>
           <button className="btn btn-sm border text-muted me-2" onClick={ likeHandle }>
