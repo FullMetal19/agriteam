@@ -1,24 +1,22 @@
 import { Outlet } from "react-router-dom";
 import { useAuth } from "../hooks/useAuth";
-import { useState } from "react";
-import LoginRedirectModal from "../components/LoginRedirectModal";
 
 export default function ProtectedRoute() 
 {
   const { user, loading } = useAuth();
-  const [showModal, setShowModal] = useState(false);
 
   if (loading) {
-    return (
+     return (
       <div className="d-flex align-items-center justify-content-center vh-100"> 
-        <div className="spinner-border text-success fs-1"></div> 
+        <div className="spinner-border text-success fs-1" role="status" aria-label="Chargement"></div> 
       </div>
-    );
+     );
   }
 
+  // If no user, redirect to external URL
   if (!user) {
-    setTimeout(() => setShowModal(true), 0); // Show modal after render
-    return <LoginRedirectModal show={showModal} onClose={() => setShowModal(false)} />;
+    window.location.href = "https://agrospace.xelkoomai.sn/?ad=true";
+    return null; // Render nothing while redirecting
   }
 
   return <Outlet />;
